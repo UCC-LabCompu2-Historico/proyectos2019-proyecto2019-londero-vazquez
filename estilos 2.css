@@ -1,0 +1,19 @@
+body{ background: azure;}
+
+h1{
+    font-size: 60px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    color: goldenrod;
+}
+
+p {
+    font-size: medium;
+    font-style: oblique;
+    text-align: justify-all;
+    font-weight: normal;
+    color: black;
+
+}
+
