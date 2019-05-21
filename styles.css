@@ -1,0 +1,66 @@
+
+body{background: bisque}
+p{
+    color: dodgerblue;
+    font-family: "Franklin Gothic Demi Cond";
+    font-size: large;
+    font-style: normal;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+   }
+#POLINOMIOS{
+
+         font-weight: lighter;
+         color: black;
+         font-style: normal;
+         font-size: x-large;
+         margin-left: 400px;
+        margin-right: auto;
+
+
+}
+#TITULO
+{ text-align: center;
+    font-weight: bold;
+    color: white;
+    font-style: normal;
+    font-size: 50px;
+    font-family: "Franklin Gothic Demi Cond";
+    text-shadow: 2px 2px 4px black;
+}
+
+#DOMINO{text-align: center;}
+
+.CENTRADO{
+    margin:10px auto;
+    display:block;
+}
+
+
+h1{
+    font-size: 60px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+input{ color: black;
+        font-family: "Franklin Gothic Demi Cond";
+       font-size: x-large}
+
+.INSTRUCCIONES{ text-align: left;}
+
+.JUEGO{background: white;}
+
+#PINKI{text-align: right;}
+
+button{ font-size:large;}
+
+#SUBTITULOS {font-size: large;}
+
+
+
+
