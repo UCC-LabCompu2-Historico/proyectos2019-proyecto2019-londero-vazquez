@@ -12,3 +12,12 @@ Los pasos que debe seguir el usuario son:
 
 La pagina le devolvera los resultados y tendra la opcion, si desea,
 de jugar al DOMINOFACT.
+
+La pagina contiene:
+
+- Una pagina principal con espacio para el ingreso de los datos e 
+instrucciones para el uso del juego.
+
+- Una pagina secundaria con informacion teorica
+
+- Imagenes
