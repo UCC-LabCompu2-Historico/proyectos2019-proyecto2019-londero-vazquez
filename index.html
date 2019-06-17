@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>DOMINOFACT</title>
-    <LINK REL="StyleSheet" HREF="styles.css" TYPE="text/css" MEDIA="screen">
+    <link rel="StyleSheet" href="styles.css" type="text/css" media="screen">
+    <script type="text/javascript" src="misFunciones.js"></script>
 </head>
 
-<body>
+<body onload="dibujarCuad()">
 
 <header>
     <h1 id="TITULO">DOMINOFACT</h1>
@@ -19,41 +20,40 @@
     <input type="button" value="TEORIA" name="B4" OnClick="location.href= `http://localhost:63342/proyectos2019-proyecto2019-londero-vazquez/Teoria.html`">
 </ul>
 
-<p id="SUBTITULOS">Ingresa los datos a factorizar</p>
+<p id="SUBTITULOS 2">Ingresa los datos a factorizar</p>
 
 <div id="CONTENEDOR">
 <div id="POLINOMIOS">
   <aside>
 
-        <ol>
-            <li> <input type="number" name="pointsj" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
-                 <input type="number" name="points" min="-100" max="100" step="1" value="0">  X +
-                 <input type="number" name="points" min="-100" max="100" step="1" value="0">  =
-                 <canvas id="myCanvas" width="100" height="20" style="border:2px solid #d3d3d3;"> </canvas> </li>
+        <ol id="ope">
+            <li> <input  id= "a" type="number" name="points" min="-100" max="100" step="1" value="0" >  X<sup>2</sup> +
+                 <input  id="b" type="number" name="points" min="-100" max="100" step="1" value="0" >  X +
+                 <input  id="c" type="number" name="points" min="-100" max="100" step="1" value="0" >  =
+                  <input id="x12" type="text" name="resultado" disabled> </li>
 
-            <li><input type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
-                <input type="number" name="points" min="-100" max="100" step="1" value="0">  X +
-                <input type="number" name="points" min="-100" max="100" step="1" value="0">  =
-                <canvas id="myCanvas" width="100" height="20" style="border:2px solid #d3d3d3;"> </canvas> </li>
+            <li><input id= "a1" type="number" name="points" min="-100" max="100" step="1" value="0" >  X<sup>2</sup> +
+                <input id="b1" type="number" name="points" min="-100" max="100" step="1" value="0">  X +
+                <input id="c1"type="number" name="points" min="-100" max="100" step="1" value="0">  =
+                <input id="1x12" type="text" name="resultado" disabled> </li>
 
-            <li><input type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
-                <input type="number" name="points" min="-100" max="100" step="1" value="0">  X +
-                <input type="number" name="points" min="-100" max="100" step="1" value="0">  =
-                <canvas id="myCanvas" width="100" height="20" style="border:2px solid #d3d3d3;"> </canvas> </li>
+            <li><input id= "a2" type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
+                <input id="b2" type="number" name="points" min="-100" max="100" step="1" value="0">  X +
+                <input id="c2" type="number" name="points" min="-100" max="100" step="1" value="0">  =
+                <input id="2x12" type="number" name="resultado" disabled> </li>
 
-            <li><input type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
-                <input type="number" name="points" min="-100" max="100" step="1" value="0">  X +
-                <input type="number" name="points" min="-100" max="100" step="1" value="0">  =
-                <canvas id="myCanvas" width="100" height="20" style="border:2px solid #d3d3d3;"> </canvas> </li>
+            <li><input id= "a3" type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
+                <input id="b3" type="number" name="points" min="-100" max="100" step="1" value="0">  X +
+                <input id="c3" type="number" name="points" min="-100" max="100" step="1" value="0">  =
+                <input id="3x12" type="number" name="resultado" disabled> </li>
 
-            <li><input type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
-                <input type="number" name="points" min="-100" max="100" step="1" value="0">  X +
-                <input type="number" name="points" min="-100" max="100" step="1" value="0">  =
-                <canvas id="myCanvas" width="100" height="20" style="border:2px solid #d3d3d3;"> </canvas> </li>
+            <li><input id= "a4" type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
+                <input id="b4"  type="number" name="points" min="-100" max="100" step="1" value="0">  X +
+                <input id="c4" type="number" name="points" min="-100" max="100" step="1" value="0">  =
+                <input id="4x12" type="number" name="resultado" disabled> </li>
 
-             <button type="button">¡RESOLVER!</button>
         </ol>
-
+      <button type="button" onclick="factoreo()">¡RESOLVER!</button>
   </aside>
 
 </div>
@@ -79,9 +79,9 @@
 
    <div id="DOMINÓ">
 
-      <section>
+      <section >
           <h2>Domino</h2>
-          <canvas id="Canvas" width="600" height="400" style="border:2px solid #d3d3d3;"> </canvas>
+          <canvas id="Canvas" > </canvas>
           <h3>¡Manos a la obra!</h3>
       </section>
 

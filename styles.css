@@ -26,7 +26,8 @@ h1
 input
 {   color: black;
     font-family: "Franklin Gothic Demi Cond";
-    font-size: x-large;
+    font-size: large;
+    text-align: justify;
 }
 
 button
@@ -74,11 +75,18 @@ button
      font-size: large;
      font-family: "Yu Gothic";
 }
-#myCanvas
-{ background: white;}
+
+#SUBTITULOS\ 2
+{
+    font-size: large;
+    font-family: "Yu Gothic";
+}
 
 #Canvas
-{background: bisque;}
+{background: bisque;
+    width:800px;
+    height:400px;
+    style:border:2px solid #d3d3d3;}
 
 .CENTRADO
 {

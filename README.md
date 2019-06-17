@@ -1,6 +1,6 @@
-##Proyecto laboratorio de computacion II
+ ## Proyecto laboratorio de computacion II
 
-##Factorizacion de polinomio de segundo grado y domino.
+ ## Factorizacion de polinomio de segundo grado y domino.
 
 Esta pagina web tiene la finalidad de factorizar ecuaciones de segundo grado.
 Y a traves de los datos ingresados creara un juego (domino), que ayudara al usuario 
