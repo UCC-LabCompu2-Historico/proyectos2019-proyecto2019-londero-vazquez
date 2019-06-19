@@ -4,7 +4,7 @@ body{background: bisque}
 p
 {
 
-    font-family: "Franklin Gothic Demi Cond";
+    font-family:Constantia;
     font-size: large;
     font-style: normal;
     text-align: left;
@@ -15,7 +15,7 @@ p
 h1
 {
     font-size: 60px;
-    font-style: italic;
+    font-style: oblique;
     text-align: center;
     font-weight: bold;
     color: white;
@@ -26,24 +26,30 @@ h1
 input
 {   color: black;
     font-family: "Franklin Gothic Demi Cond";
-    font-size: x-large;
+    font-size: large;
+    text-align: justify;
 }
 
 button
 {
-    font-size:large;
+    font-size: medium;
     margin-top: 40px;
 }
 
+nav
+{background:wheat;}
+
+
+
 #POLINOMIOS
 {
-         font-weight: lighter;
-         color: black;
-         font-style: normal;
-         font-size: x-large;
-         float: left;
-         width: 800px;
-         margin: 40px;
+    font-weight: lighter;
+    color: black;
+    font-style: normal;
+    font-size: large;
+    float: left;
+    width: 800px;
+    margin: 40px;
 
 }
 
@@ -56,29 +62,37 @@ button
     color: white;
     font-style: normal;
     font-size: 60px;
-    font-family: "Franklin Gothic Demi Cond";
+    font-family: "Lucida Calligraphy";
     text-shadow: 2px 2px 4px black;
 }
 
-#DOMINÓ{text-align: center;}
+
 
 #PINKI
 {
     float: left;
-    width: 200px;
     margin: 40px;
+    width: 200px;
+    height: 200px;
 }
 
 #SUBTITULOS
 {
-     font-size: large;
-     font-family: "Yu Gothic";
+    font-size: large;
+    font-family: Constantia;
 }
-#myCanvas
-{ background: white;}
+
+#SUBTITULOS\ 2
+{
+    font-size: large;
+    font-family: Constantia;
+}
 
 #Canvas
-{background: bisque;}
+{background: bisque;
+    width:800px;
+    height:400px;
+    style:border:2px solid #d3d3d3;}
 
 .CENTRADO
 {
@@ -91,13 +105,6 @@ button
     text-align: left;
 }
 
-.JUEGO {background: white;
-        margin-top: 40px;}
-
-
-
-
-
-
-
-
+.GRAFICO {background: white;
+    margin-top: 40px;
+    text-align: center;}
