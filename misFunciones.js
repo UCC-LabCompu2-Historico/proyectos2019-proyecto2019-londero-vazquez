@@ -48,7 +48,7 @@ function factoreo() {
         x2=x-compleja+"i";}
 
     var raiz= "(x-("+x1+"))"+"(x-("+x2+"))" ;
-    document.getElementById("1x12").value = raiz ;
+    document.getElementById("x21").value = raiz ;
 
 
 
@@ -122,6 +122,8 @@ function cuadratica(a,b,c,x1,x2) {
 }
 
 function drawfx(x,y){
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
 
     x = x+(canvas.width/2);
     y = y+(canvas.height/2);

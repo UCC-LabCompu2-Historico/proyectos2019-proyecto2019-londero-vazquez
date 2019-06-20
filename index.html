@@ -42,7 +42,7 @@
                 <li> <input  id= "a1" type="number" name="points" min="-100" max="100" step="1" value="0" >  X<sup>2</sup> +
                     <input  id="b1" type="number" name="points" min="-100" max="100" step="1" value="0" >  X +
                     <input  id="c1" type="number" name="points" min="-100" max="100" step="1" value="0" >  =
-                    <input id="1x12" type="text" name="resultado" disabled> </li>
+                    <input id="x21" type="text" name="resultado" disabled> </li>
             </ol>
             <button type="button" onclick="factoreo()">¡RESOLVER!</button>
         </aside>
@@ -67,7 +67,7 @@
                 <button  class="boton" type="button" onclick="dibujarCuad()" >ON</button>
 
 
-                <button class="boton" type="button" onclick="cuadratica()" >GRAFICAR</button>
+                <button class="boton" type="button" onclick="cuadratica(a.value, b.value, c.value, x12.value, x21.value)" >GRAFICAR</button>
 
 
                 <button  class="boton" type="button" onclick="borrar()" >OFF</button>
