@@ -22,7 +22,7 @@ instrucciones para el uso del juego.
 
 - Imagenes
 
- ## CAMBIOS
- 
- La pagina por problemas de dificultad, no realizara el dominofact, sino que graficara la funcion 
- cuadratica ingresada por el usuario.
+## CAMBIOS
+
+La pagina por problemas de dificultad, no realizara el dominofact, sino que graficara la funcion 
+cuadratica ingresada por el usuario.

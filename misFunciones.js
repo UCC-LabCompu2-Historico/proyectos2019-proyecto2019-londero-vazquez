@@ -26,14 +26,14 @@ function factoreo() {
     var raiz= "(x-("+x1+"))"+"(x-("+x2+"))" ;
     document.getElementById("x12").value = raiz ;
 
-     a = Number(document.getElementById("a1").value);
-     b = Number(document.getElementById("b1").value);
-     c = Number(document.getElementById("c1").value);
-     d= (b*b)-(4*a*c);
+    a = Number(document.getElementById("a1").value);
+    b = Number(document.getElementById("b1").value);
+    c = Number(document.getElementById("c1").value);
+    d= (b*b)-(4*a*c);
 
     if (d==0)
     { x1=-b/2*a;
-      x2=-b/2*a;}
+        x2=-b/2*a;}
 
     else
 
@@ -121,15 +121,15 @@ function cuadratica(a,b,c,x1,x2) {
     }
 }
 
- function drawfx(x,y){
+function drawfx(x,y){
 
-     x = x+(canvas.width/2);
-     y = y+(canvas.height/2);
+    x = x+(canvas.width/2);
+    y = y+(canvas.height/2);
 
-     ctx.beginPath();
-     ctx.arc(x, y, 1, 0, 2 * Math.PI);
-     ctx.fill();
-     ctx.closePath();
+    ctx.beginPath();
+    ctx.arc(x, y, 1, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.closePath();
 
 }
 
@@ -142,10 +142,3 @@ function borrar() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 }
-
-
-
-
-
-
-
