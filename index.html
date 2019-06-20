@@ -13,7 +13,7 @@
 <body>
 
 <header>
-    <h1 id="TITULO">FACTOREANDO</h1>
+    <h1 id="TITULO">Factoreando</h1>
 </header>
 
 <nav class="TEORIA">
@@ -49,18 +49,32 @@
 
     </div>
 
-    <div id="PINKI"> <img src="imagenes/pinki.jpeg"> </div>
+    <div id="PINKI"> <img class="img" src="imagenes/pinki.jpeg" > </div>
 
 </div>
 
 
+
 <div class="GRAFICO">
+
 
     <div class="INSTRUCCIONES">
 
         <aside>
             <ul>
-                <button type="button" onclick="dibujarCuad()" >¡GRAFICAR!</button>
+
+                <h2> AHORA GRAFIQUEMOS!</h2>
+
+                <button  class="boton" type="button" onclick="dibujarCuad()" >ON</button>
+
+
+                <button class="boton" type="button" onclick="cuadratica()" >GRAFICAR</button>
+
+
+                <button  class="boton" type="button" onclick="borrar()" >OFF</button>
+
+
+
             </ul>
         </aside>
 
@@ -69,8 +83,7 @@
     <div id="GRAFICANDO">
 
         <section >
-            <h2>GRAFICANDO</h2>
-            <canvas id="Canvas" > </canvas>
+            <canvas width="800" height="400" id="canvas" > </canvas> //uso estilo en linea para q el cuadriculado se vea normal
             <h3>¡Manos a la obra!</h3>
         </section>
 

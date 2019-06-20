@@ -21,3 +21,8 @@ instrucciones para el uso del juego.
 - Una pagina secundaria con informacion teorica
 
 - Imagenes
+
+ ## CAMBIOS
+ 
+ La pagina por problemas de dificultad, no realizara el dominofact, sino que graficara la funcion 
+ cuadratica ingresada por el usuario.
