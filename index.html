@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <title>DOMINOFACT</title>
     <link rel="StyleSheet" href="styles.css" type="text/css" media="screen">
     <script type="text/javascript" src="misFunciones.js"></script>
+
 </head>
 
 <body onload="dibujarCuad()">
@@ -14,11 +16,15 @@
     <h1 id="TITULO">Factoreando</h1>
 </header>
 
+<nav class="TEORIA">
+
+    <input type="button" value="TEORIA" name="B4" OnClick="location.href= `http://localhost:63342/proyectos2019-proyecto2019-londero-vazquez/Teoria.html`">
+
+</nav>
+
 <p id="SUBTITULOS">Factorea ecuaciones de segundo grado</p>
 
-<ul class="TEORIA">
-    <input type="button" value="TEORIA" name="B4" OnClick="location.href= `http://localhost:63342/proyectos2019-proyecto2019-londero-vazquez/Teoria.html`">
-</ul>
+
 
 <p id="SUBTITULOS 2">Ingresa los datos a factorizar</p>
 
@@ -26,33 +32,18 @@
 <div id="POLINOMIOS">
   <aside>
 
-        <ol id="ope">
-            <li> <input  id= "a" type="number" name="points" min="-100" max="100" step="1" value="0" >  X<sup>2</sup> +
-                 <input  id="b" type="number" name="points" min="-100" max="100" step="1" value="0" >  X +
-                 <input  id="c" type="number" name="points" min="-100" max="100" step="1" value="0" >  =
-                  <input id="x12" type="text" name="resultado" disabled> </li>
+      <ol id="ope">
+          <li> <input  id= "a" type="number" name="points" min="-100" max="100" step="1" value="0" >  X<sup>2</sup> +
+              <input  id="b" type="number" name="points" min="-100" max="100" step="1" value="0" >  X +
+              <input  id="c" type="number" name="points" min="-100" max="100" step="1" value="0" >  =
+              <input id="x12" type="text" name="resultado" disabled> </li>
+          <br>
 
-            <li><input id= "a1" type="number" name="points" min="-100" max="100" step="1" value="0" >  X<sup>2</sup> +
-                <input id="b1" type="number" name="points" min="-100" max="100" step="1" value="0">  X +
-                <input id="c1"type="number" name="points" min="-100" max="100" step="1" value="0">  =
-                <input id="1x12" type="text" name="resultado" disabled> </li>
-
-            <li><input id= "a2" type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
-                <input id="b2" type="number" name="points" min="-100" max="100" step="1" value="0">  X +
-                <input id="c2" type="number" name="points" min="-100" max="100" step="1" value="0">  =
-                <input id="2x12" type="number" name="resultado" disabled> </li>
-
-            <li><input id= "a3" type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
-                <input id="b3" type="number" name="points" min="-100" max="100" step="1" value="0">  X +
-                <input id="c3" type="number" name="points" min="-100" max="100" step="1" value="0">  =
-                <input id="3x12" type="number" name="resultado" disabled> </li>
-
-            <li><input id= "a4" type="number" name="points" min="-100" max="100" step="1" value="0">  X<sup>2</sup> +
-                <input id="b4"  type="number" name="points" min="-100" max="100" step="1" value="0">  X +
-                <input id="c4" type="number" name="points" min="-100" max="100" step="1" value="0">  =
-                <input id="4x12" type="number" name="resultado" disabled> </li>
-
-        </ol>
+          <li> <input  id= "a1" type="number" name="points" min="-100" max="100" step="1" value="0" >  X<sup>2</sup> +
+              <input  id="b1" type="number" name="points" min="-100" max="100" step="1" value="0" >  X +
+              <input  id="c1" type="number" name="points" min="-100" max="100" step="1" value="0" >  =
+              <input id="1x12" type="text" name="resultado" disabled> </li>
+      </ol>
       <button type="button" onclick="factoreo()">¡RESOLVER!</button>
   </aside>
 
@@ -63,33 +54,43 @@
 </div>
 
 
-<div class="JUEGO">
 
- <div class="INSTRUCCIONES">
+<div class="GRAFICO">
 
-    <aside>
-        <b>Instrucciones:</b>
-        <ul>
-            <li>Une el polinomio con el correcto factor.</li>
-            <li> Y listo!! Asi podras aprender y memorizar de la forma mas facil, jugando.</li>
-        </ul>
-    </aside>
 
- </div>
+    <div class="INSTRUCCIONES">
 
-   <div id="DOMINÓ">
+        <aside>
+            <ul>
 
-      <section >
-          <h2>Domino</h2>
-          <canvas id="Canvas" > </canvas>
-          <h3>¡Manos a la obra!</h3>
-      </section>
+                <h2> AHORA GRAFIQUEMOS!</h2>
 
-   </div>
+                <button  class="boton" type="button" onclick="dibujarCuad()" >ON</button>
+
+
+                <button class="boton" type="button" onclick="cuadratica()" >GRAFICAR</button>
+
+
+                <button  class="boton" type="button" onclick="borrar()" >OFF</button>
+
+
+
+            </ul>
+        </aside>
+
+    </div>
+
+    <div id="GRAFICANDO">
+
+        <section >
+            <canvas width="800" height="400" id="canvas" > </canvas> //uso estilo en linea para q el cuadriculado se vea normal
+            <h3>¡Manos a la obra!</h3>
+        </section>
+
+    </div>
 
 </div>
 
 <footer> Creado por Vazquez Sol - Londero Camila</footer>
-
 </body>
 </html>
