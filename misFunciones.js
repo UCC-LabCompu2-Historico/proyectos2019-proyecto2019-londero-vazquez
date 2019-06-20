@@ -9,7 +9,7 @@ function factoreo() {
 
     if (d==0)
     { var x1=-b/2*a;
-        var x2=-b/2*a;}
+      var x2=-b/2*a;}
 
     else
 
@@ -106,12 +106,12 @@ function cuadratica(a,b,c,x1,x2) {
 
     ctx.strokeStyle = "#e9000b";
 
-    var vx= -b/2*a;
-    var vy= a*(vx*vx)+(b*vx)+c;
+     var vx= -b/2*a;
+     var vy= a*(vx*vx)+(b*vx)+c;
 
-    drawfx(vx,vy);//dibujar vertice
+     drawfx(vx,vy);//dibujar vertice
 
-    drawfx(x1,x2);//dibujar raices
+     drawfx(x1,x2);//dibujar raices
 
     for
     (
