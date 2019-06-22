@@ -98,16 +98,13 @@ function cuadratica(a,b,c,x1,x2) {
     document.getElementById("vy").value = vy;
 
     drawfx(vx,vy);//dibujar vertice
-
     drawfx(x1,0);//dibujar raices
     drawfx(x2,0);
 
-    /*for
-    (
-        var x = -canvas.width; x < canvas.width; x = x +0.1) {
+    for (var x = -canvas.width; x < canvas.width; x = x +0.1) {
         var y = a*Math.pow(x, 2)+b*x+c;
         drawfx(x, y);
-    }*/
+    }
 }
 
 function drawfx(x,y){
