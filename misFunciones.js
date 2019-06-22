@@ -1,3 +1,12 @@
+/**<font></font>
+ * Calculo de raices del polinomio<font></font>
+ * @method factoreo<font></font>
+ * @param Parámetro a<font></font>
+ * @param Parámetro b<font></font>
+ * @param Parámetro c<font></font>
+ * @return x1,x2,x12<font></font>
+ */
+
 function factoreo() {
 
 
@@ -8,8 +17,8 @@ function factoreo() {
     var d= (b*b)-(4*a*c);
 
     if (d==0)
-    { var x1=-b/2*a;
-      var x2=-b/2*a;}
+    {   var x1= -b/2*a;
+        var x2= -b/2*a;}
 
     else
 
@@ -25,34 +34,13 @@ function factoreo() {
 
     var raiz= "(x-("+x1+"))"+"(x-("+x2+"))" ;
     document.getElementById("x12").value = raiz ;
-
-    a = Number(document.getElementById("a1").value);
-    b = Number(document.getElementById("b1").value);
-    c = Number(document.getElementById("c1").value);
-    d= (b*b)-(4*a*c);
-
-    if (d==0)
-    { x1=-b/2*a;
-        x2=-b/2*a;}
-
-    else
-
-    if(d>0)
-    {   x1= -b+Math.sqrt(d)/2*a;
-        x2= -b-Math.sqrt(d)/2*a;}
-
-    else
-    {  x= -b/2*a;
-        var compleja= Math.sqrt((-1)*d)/2*a;
-        x1=x+compleja+"i";
-        x2=x-compleja+"i";}
-
-    var raiz= "(x-("+x1+"))"+"(x-("+x2+"))" ;
-    document.getElementById("x21").value = raiz ;
-
+    document.getElementById("x1").value = x1 ;
+    document.getElementById("x2").value = x2 ;
 
 
 }
+
+
 
 function dibujarCuad(){
 
@@ -97,39 +85,51 @@ function dibujarCuad(){
 
 }
 
-function cuadratica(a,b,c,x1,x2) {
+function cuadratica(a,b,c,x,x2) {
 
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
 
 
 
-    ctx.strokeStyle = "#e9000b";
 
-     var vx= -b/2*a;
-     var vy= a*(vx*vx)+(b*vx)+c;
 
-     drawfx(vx,vy);//dibujar vertice
+    var vx= -b/2*a;
+    var vy=Number(a*vx*vx)+Number(b*vx)+Number(c);
 
-     drawfx(x1,x2);//dibujar raices
+    document.getElementById("vx").value = vx;
+    document.getElementById("vy").value = vy;
 
-    for
+    drawfx(vx,vy);//dibujar vertice
+
+    drawfx(x1,0);//dibujar raices
+    drawfx(x2,0);
+
+    /*for
     (
-        var x = -canvas.width; x < canvas.width; x = x + 0.1) {
+        var x = -canvas.width; x < canvas.width; x = x + 10) {
         var y = a*Math.pow(x, 2)+b*x+c;
         drawfx(x, y);
-    }
+    }*/
 }
 
 function drawfx(x,y){
+
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
+    ctx.strokeStyle = "#e9000b";
+    ctx.fillStyle= "#e9000b";
 
-    x = x+(canvas.width/2);
-    y = y+(canvas.height/2);
+    if(y<0)
+    {x = (x+400);
+    y = (y+300);}
+
+    else
+    {x=(x+400);
+     y=(x+200);}
 
     ctx.beginPath();
-    ctx.arc(x, y, 1, 0, 2 * Math.PI);
+    ctx.arc(x, y, 3, 0, 2 * Math.PI);
     ctx.fill();
     ctx.closePath();
 
@@ -144,3 +144,6 @@ function borrar() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 }
+
+
+

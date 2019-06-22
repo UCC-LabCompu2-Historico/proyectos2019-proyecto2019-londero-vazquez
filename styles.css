@@ -62,7 +62,7 @@ button
     color: white;
     font-style: normal;
     font-size: 60px;
-    font-family: "Lucida Calligraphy";
+    font-family: "Franklin Gothic Demi Cond";
     text-shadow: 2px 2px 4px black;
 }
 
@@ -139,3 +139,10 @@ h3{text-align: right;}
     margin-top: 180px;
 
 }
+
+#x1{width: 30px;
+     height: 30px;}
+
+
+#x2{width: 30px;
+    height: 30px;}
