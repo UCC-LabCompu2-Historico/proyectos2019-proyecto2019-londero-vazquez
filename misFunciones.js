@@ -85,13 +85,10 @@ function dibujarCuad(){
 
 }
 
-function cuadratica(a,b,c,x,x2) {
+function cuadratica(a,b,c,x1,x2) {
 
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
-
-
-
 
 
     var vx= -b/2*a;
@@ -107,7 +104,7 @@ function cuadratica(a,b,c,x,x2) {
 
     /*for
     (
-        var x = -canvas.width; x < canvas.width; x = x + 10) {
+        var x = -canvas.width; x < canvas.width; x = x +0.1) {
         var y = a*Math.pow(x, 2)+b*x+c;
         drawfx(x, y);
     }*/
@@ -120,13 +117,8 @@ function drawfx(x,y){
     ctx.strokeStyle = "#e9000b";
     ctx.fillStyle= "#e9000b";
 
-    if(y<0)
-    {x = (x+400);
-    y = (y+300);}
-
-    else
-    {x=(x+400);
-     y=(x+200);}
+        x=x+400;
+        y=x+200;
 
     ctx.beginPath();
     ctx.arc(x, y, 3, 0, 2 * Math.PI);
