@@ -117,8 +117,8 @@ function drawfx(x,y){
     ctx.strokeStyle = "#e9000b";
     ctx.fillStyle= "#e9000b";
 
-        x=x+400;
-        y=x+200;
+    x=x+400;
+    y=y+200;
 
     ctx.beginPath();
     ctx.arc(x, y, 3, 0, 2 * Math.PI);
