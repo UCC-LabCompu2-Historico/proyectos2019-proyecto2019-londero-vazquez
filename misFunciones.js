@@ -7,6 +7,8 @@
  * @return x1,x2,x12<font></font>
  */
 
+var auxZ;
+var id;
 function factoreo() {
 
 
@@ -40,7 +42,10 @@ function factoreo() {
 
 }
 
-
+/**<font></font>
+ * Dibuja el cuadriculado y el eje de coordenadas<font></font>
+ * @method dibujarCuad<font></font>
+ */
 
 function dibujarCuad(){
 
@@ -84,8 +89,16 @@ function dibujarCuad(){
     ctx.closePath();
 
 }
+var can,auxA,auxB,auxC;
 
-function cuadratica(a,b,c,x1,x2) {
+/**<font></font>
+ * Calculo de vertices <font></font>
+ * @method cuadratica<font></font>
+ * @param Parámetro a<font></font>
+ * @param Parámetro b<font></font>
+ * @param Parámetro c<font></font>
+ */
+function cuadratica(a,b,c) {
 
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -97,16 +110,42 @@ function cuadratica(a,b,c,x1,x2) {
     document.getElementById("vx").value = vx;
     document.getElementById("vy").value = vy;
 
-    drawfx(vx,vy);//dibujar vertice
-    drawfx(x1,0);//dibujar raices
-    drawfx(x2,0);
-
-    for (var x = -canvas.width; x < canvas.width; x = x +0.1) {
-        var y = a*Math.pow(x, 2)+b*x+c;
-        drawfx(x, y);
-    }
+    auxZ=-canvas.width/2;
+    auxA=a;
+    auxB=b;
+    auxC=c;
+    can=canvas.width;
+    id=setInterval(cuadraticaAnimada,1/100);
 }
 
+/**<font></font>
+ * Dibuja y anima funcion cuadratica<font></font>
+ * @method cuadraticaAnimada<font></font>
+ */
+
+function cuadraticaAnimada()
+{
+    if(can<=auxZ)
+    {
+        clearInterval(id);
+    }
+    else
+    {
+        var y=auxA*Math.pow(auxZ, 2)+auxB*auxZ+auxC;
+        y*=-1;
+        drawfx(auxZ,y);
+        auxZ+=0.2;
+        console.log("Ciclo"+auxZ);
+    }
+
+}
+
+/**<font></font>
+ * La funcion te grafica el punto ubicado en la coordenada x e y que fue pasado como parametro<font></font>
+ * @method drawfx<font></font>
+ * @param Parámetro x<font></font>
+ * @param Parámetro y<font></font>
+ */
 function drawfx(x,y){
 
     var canvas = document.getElementById("canvas");
@@ -118,12 +157,16 @@ function drawfx(x,y){
     y=y+200;
 
     ctx.beginPath();
-    ctx.arc(x, y, 3, 0, 2 * Math.PI);
+    ctx.arc(x, y, 2, 0, 2 * Math.PI);
     ctx.fill();
     ctx.closePath();
 
 }
 
+/**<font></font>
+ * Blanquea el canvas para dibujar una nueva funcion<font></font>
+ * @method borrar<font></font>
+ */
 
 function borrar() {
 
