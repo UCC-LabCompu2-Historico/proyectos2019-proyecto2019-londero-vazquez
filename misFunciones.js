@@ -92,7 +92,7 @@ function dibujarCuad(){
 var can,auxA,auxB,auxC;
 
 /**<font></font>
- * Calculo de vertices <font></font>
+ * Calculo de vertices y animacion <font></font>
  * @method cuadratica<font></font>
  * @param Parámetro a<font></font>
  * @param Parámetro b<font></font>
