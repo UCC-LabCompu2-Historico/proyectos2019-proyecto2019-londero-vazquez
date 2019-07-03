@@ -22,6 +22,8 @@ instrucciones para el uso del juego.
 
 - Imagenes
 
+- Grafico animado
+
 ## CAMBIOS
 
 La pagina por problemas de dificultad, no realizara el dominofact, sino que graficara la funcion 
