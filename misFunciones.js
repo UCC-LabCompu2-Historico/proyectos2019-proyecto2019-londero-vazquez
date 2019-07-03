@@ -7,6 +7,8 @@
  * @return x1,x2,x12<font></font>
  */
 
+var auxZ;
+var id;
 function factoreo() {
 
 
@@ -32,9 +34,6 @@ function factoreo() {
         x1=x+compleja+"i";
         x2=x-compleja+"i";}
 
-    x1= Math.round(x1);
-    x2= Math.round(x2);
-
     var raiz= "(x-("+x1+"))"+"(x-("+x2+"))" ;
     document.getElementById("x12").value = raiz ;
     document.getElementById("x1").value = x1 ;
@@ -43,12 +42,10 @@ function factoreo() {
 
 }
 
-
 /**<font></font>
  * Dibuja el cuadriculado y el eje de coordenadas<font></font>
  * @method dibujarCuad<font></font>
  */
-
 
 function dibujarCuad(){
 
@@ -92,17 +89,16 @@ function dibujarCuad(){
     ctx.closePath();
 
 }
+var can,auxA,auxB,auxC;
 
 /**<font></font>
- * Calculo de vertices y puntos de la funcion<font></font>
+ * Calculo de vertices <font></font>
  * @method cuadratica<font></font>
  * @param Parámetro a<font></font>
  * @param Parámetro b<font></font>
  * @param Parámetro c<font></font>
- * @param Parámetro x1<font></font>
- * @param Parámetro x2<font></font>
  */
-function cuadratica(a,b,c,x1,x2) {
+function cuadratica(a,b,c) {
 
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -114,14 +110,34 @@ function cuadratica(a,b,c,x1,x2) {
     document.getElementById("vx").value = vx;
     document.getElementById("vy").value = vy;
 
-    drawfx(vx,vy);//dibujar vertice
-    //drawfx(x1,0);//dibujar raices
-    //drawfx(x2,0);
+    auxZ=-canvas.width/2;
+    auxA=a;
+    auxB=b;
+    auxC=c;
+    can=canvas.width;
+    id=setInterval(cuadraticaAnimada,1/100);
+}
 
-   /* for (var x = -canvas.width; x < canvas.width; x = x +0.1) {
-        var y = a*Math.pow(x, 2)+b*x+c;
-        drawfx(x, y);
-    }*/
+/**<font></font>
+ * Dibuja y anima funcion cuadratica<font></font>
+ * @method cuadraticaAnimada<font></font>
+ */
+
+function cuadraticaAnimada()
+{
+    if(can<=auxZ)
+    {
+        clearInterval(id);
+    }
+    else
+    {
+        var y=auxA*Math.pow(auxZ, 2)+auxB*auxZ+auxC;
+        y*=-1;
+        drawfx(auxZ,y);
+        auxZ+=0.2;
+        console.log("Ciclo"+auxZ);
+    }
+
 }
 
 /**<font></font>
@@ -130,7 +146,6 @@ function cuadratica(a,b,c,x1,x2) {
  * @param Parámetro x<font></font>
  * @param Parámetro y<font></font>
  */
-
 function drawfx(x,y){
 
     var canvas = document.getElementById("canvas");
@@ -138,26 +153,15 @@ function drawfx(x,y){
     ctx.strokeStyle = "#e9000b";
     ctx.fillStyle= "#e9000b";
 
-    if(x==0 && y==0)
-    {x=x+400;
-     y=y+200;}
-    else
-        if(x>0 && y>0)
-        { x=x+420;
-            y=y+220;}
-
-        else
-
-        {   x=(x+420)-(x*2);
-            y=(y+220)-(y*2);}
+    x=x+400;
+    y=y+200;
 
     ctx.beginPath();
-    ctx.arc(x, y, 3, 0, 2 * Math.PI);
+    ctx.arc(x, y, 2, 0, 2 * Math.PI);
     ctx.fill();
     ctx.closePath();
 
 }
-
 
 /**<font></font>
  * Blanquea el canvas para dibujar una nueva funcion<font></font>
